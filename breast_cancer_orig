@@ -28,7 +28,7 @@ nb_conv = 3
 
 def load_training_data():
 
-    file1 = open("/home/vivek/ocr_merged_file.txt", "r")
+    file1 = open("/home/vivek/breast_orig_train.csv", "r")
     every = file1.readlines()
 
     digit = []
