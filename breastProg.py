@@ -37,7 +37,7 @@ def load_training_data():
     for i in data[1:]:
         a = i[:-1]
         a = a[:,np.newaxis]
-        a = np.reshape(a, (3,3))
+        a = np.reshape(a, (3,11))
         train.append(a)
         
         b = i[-1]
@@ -61,7 +61,7 @@ def load_test_data():
     for i in data[1:]:
         a = i[:-1]
         a = a[:,np.newaxis]
-        a = np.reshape(a, (3,3))
+        a = np.reshape(a, (3,11))
         train.append(a)
         
         b = i[-1]
