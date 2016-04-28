@@ -26,7 +26,7 @@ nb_pool = 2
 nb_conv = 3
 
 def load_training_data():
-    with open("/home/vivek/anaconda2/split_data/breast_orig_train.csv") as f:    
+    with open("/home/vivek/anaconda2/split_data/breast_tumor_train.csv") as f:    
         data = np.array(list(csv.reader(f, delimiter=",")))
     
     train = []
@@ -51,7 +51,7 @@ def load_training_data():
 
 def load_test_data():
     
-    with open("/home/vivek/anaconda2/split_data/breast_orig_test.csv") as f:    
+    with open("/home/vivek/anaconda2/split_data/breast_tumor_test.csv") as f:    
         data = np.array(list(csv.reader(f, delimiter=",")))
     
     train = []
