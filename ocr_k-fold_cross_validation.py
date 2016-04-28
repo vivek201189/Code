@@ -1,6 +1,7 @@
 from __future__ import print_function
 import numpy as np
 np.random.seed(1337)  # for reproducibility
+
 from keras.datasets import mnist
 from keras.models import Sequential
 from keras.layers.core import Dense, Dropout, Activation, Flatten
@@ -15,7 +16,7 @@ batch_size = 32
 nb_classes = 10
 nb_epoch = 10
 
-# input image dimensions
+# input dimensions
 img_rows, img_cols = 32, 32
 # number of convolutional filters to use
 nb_filters = 32
@@ -24,6 +25,8 @@ nb_pool = 2
 # convolution kernel size
 nb_conv = 3
 
+
+def load_training_data():
 
     file1 = open("/home/vivek/merged_file.txt", "r")
     every = file1.readlines()
@@ -95,14 +98,13 @@ def train_and_evaluate_model(model, X_train, y_train, X_test, y_test, cond):
         totalClasses = [0,1,2,3,4,5,6,7,8,9]
         metric = MyMetric(0)
         metric.compute_metrics(X_test, y_test, classes, prob, totalClasses)
-        print ('mean acc'), metric.mean_accuracy
-        print ('mean f1'), metric.mean_f1_score
-        print ('mean roc area'), metric.mean_roc_area
-        print ('mrean _avg prec'), metric.mean_avg_precision
-        print ('mean_BEP'), metric.mean_BEP
-        print ('mean_BEP_gap'), metric.mean_BEP_gap
-        print ('mean rmse'), metric.mean_rmse
+        print ('mean acc', metric.mean_accuracy)
+        print ('mean f1', metric.mean_f1_score)
+        print ('mean roc area', metric.mean_roc_area)
+        print ('mean prec', metric.mean_avg_precision)
+        print ('mean recall',metrics.recall_score)
         
+
 if __name__ == "__main__":
     
     n_folds = 5
