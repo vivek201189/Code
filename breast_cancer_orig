@@ -108,7 +108,7 @@ def train_and_evaluate_model(model, X_train, y_train, X_test, y_test):
     print('y_pred:', prob[0])
     
      if (cond):
-        totalClasses = [0,1,2,3,4,5,6,7,8,9]
+        totalClasses = [0,1]
         metric = MyMetrics(0)
         metric.compute_metrics(X_test, y_test, classes, prob, totalClasses)
         print ('mean acc', metric.mean_accuracy)
