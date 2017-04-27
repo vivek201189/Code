@@ -94,17 +94,6 @@ def train_and_evaluate_model(model, X_train, y_train, X_test, y_test, cond):
     prob = model.predict_proba(X_test, batch_size=32)
     print('y_pred:', prob[0])
     
-    if (cond):
-        totalClasses = [0,1,2,3,4,5,6,7,8,9]
-        metric = MyMetric(0)
-        metric.compute_metrics(X_test, y_test, classes, prob, totalClasses)
-        print ('mean acc', metric.mean_accuracy)
-        print ('mean f1', metric.mean_f1_score)
-        print ('mean roc area', metric.mean_roc_area)
-        print ('mean prec', metric.mean_avg_precision)
-        print ('mean recall',metrics.recall_score)
-        
-
 if __name__ == "__main__":
     
     n_folds = 5
