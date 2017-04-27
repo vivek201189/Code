@@ -1,5 +1,6 @@
 # Code
 These are other important machine learning codes:
 
-  - convolutional neural networks for breast cancer classification
+  - Convolutional Neural Networks (CNN) for breast cancer classification from the UCI Data Repository
   - MNIST digit recognition task
+  - OCR k-fold cross-validated CNN implementation for clasification
